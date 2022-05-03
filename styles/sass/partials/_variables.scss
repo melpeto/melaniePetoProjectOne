@@ -1,3 +1,11 @@
+
+/* site fonts */
+$headingFont: 'Lora', serif;
+$bodyFont: 'Roboto', sans-serif;
+
+/* if we set our root element font-size to 125%, then 1 rem = 20px */
+$baseFontSize: 1rem;
+
 $primary: #f6a823;
 $lightBackground: #f0efed;
 $basicText: #2c2c2c;

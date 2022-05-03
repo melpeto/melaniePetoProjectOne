@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400;700&display=swap");
+/* site fonts */
+/* if we set our root element font-size to 125%, then 1 rem = 20px */
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -219,4 +222,28 @@ template {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+html {
+  font-size: 125%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  font-family: "Lora", serif;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  display: block;
 }
