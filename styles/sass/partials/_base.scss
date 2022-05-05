@@ -8,3 +8,22 @@ img {
     width: 100%;
     display: block;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+li {
+    list-style: none;
+}
+
+
+button,
+.button {
+    line-height: 32px;;
+    background-color: $button;
+    padding: 10px 20px;
+    margin-top: 20px;
+}

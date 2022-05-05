@@ -11,8 +11,59 @@ html {
 body {
     font-family: $bodyFont;
     font-size: 1rem;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+ul.topNavFlex,
+h2,
+h3,
+h4,
+.selected,
+button,
+.button {
+    text-transform: uppercase;
+    letter-spacing: 1px;;
 }
 
 h1 {
+    font-size: 4rem;
+}
+
+.logo {
+    font-size: 2.1rem;
+}
+
+h1,
+.logo {
     font-family: $headingFont;
+    text-transform: uppercase;
+}
+
+ul.topNavFlex {
+    font-size: 1rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.selected {
+    font-size: 1.2rem;
+    color: rgb(246, 246, 246);
 }

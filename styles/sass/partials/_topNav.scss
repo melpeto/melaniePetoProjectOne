@@ -1,0 +1,22 @@
+.topNav {
+    background-color: $primary;
+    line-height: 29px;
+    .topNavFlex {
+        display: flex;
+        margin: 0 auto;
+        padding: 20px 50px;
+        justify-content: center;
+        li {
+            margin: 0 15px;
+            padding: 15px;
+        }
+        a {
+            padding: 15px;
+        }
+    }
+    
+
+}
+
+
+
