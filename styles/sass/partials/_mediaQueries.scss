@@ -1,18 +1,175 @@
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
 
-@media (max-width: 1024px) {}
+// .headerHome {
+//     .headerFlexParent {
+//         .headerTitle {
+//             margin-right: 50px;
+//         }
+//         .headerImg {
+//             box-shadow: 15px 15px white;
+//             margin-left: 50px;
+//         }
+//     }
+// }
+
+
+}
+
+@media (max-width: 1024px) {
+
+    .topNav {
+        height: 100px;
+        .wrapper {
+            position: relative;
+            .hamburgerMenu {
+                display: block;
+            }
+        }
+        .topNavFlex {
+            background-color: $lightBackground;
+            position: absolute;
+            height: 0;
+            overflow: hidden;
+            top: 0;
+            left: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin: 0 auto;
+            padding: 0;
+            justify-content: center;
+    
+            li {
+                margin: 0 15px;
+                padding: 15px;
+            }
+    
+            a {
+                padding: 15px;
+            }
+        }    
+        i:hover .topNavFlex,
+        i:focus .topNavFlex,
+        i:active .topNavFlex {
+            height: auto;
+        }
+    }
+
+    .headerHome {
+        .headerFlexParent {
+            flex-direction: column;
+            .headerTitle {
+                margin-right: 50px;
+                margin-left: 50px;
+            }
+            .headerImg {
+                margin-left: 0px;
+                position: static;
+                // top: 0px;
+                margin-bottom: 100px;
+                flex-shrink: 1;
+            }
+        }
+    }
+
+    .whoIsSophie {
+        text-align: center;
+    }
+
+    .featureSection {
+        .redBox,
+        .orangeBox {
+            display: none;
+        }
+        .features {
+            flex-direction: column;
+            .textContainer {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .journey {
+        .wrapper {
+            .imgContainer {
+                max-width: 40%;
+            }
+            .textContainer {
+                max-width: 60%;
+                padding: 100px 25px;
+            }
+        }
+    }
+
+
+    // HOME - BOTTOM SQUARE PIC GALLERY
+    .gallery {
+        ul {
+            li {
+                max-width: 50%;
+            }
+        }
+    }
+
+
+}
 
 @media (max-width: 768px) {
 
-.links {
-    .linksFlexParent {
-        li {
-            max-width: 100%;
+    .headerHome {
+        .headerFlexParent {
+            .headerTitle {
+                h1 {
+                    font-size: 4.5rem;
+                }
+            }
+        }
+    }
+
+    .links {
+        .linksFlexParent {
+            li {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .gallery {
+        ul {
+            display: flex;
+            flex-direction: column;
+            // flex-wrap: wrap;
+            justify-content: center;
+            padding: 75px 0;
+    
+            li {
+                max-width: 100%;
+                // min-width: 300px;
+                margin: 15px 50px;
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 480px) {
+
+    .headerHome {
+        .headerFlexParent {
+            .headerTitle {
+                max-width: 90%;
+                h1 {
+                    font-size: 3rem;
+                }
+                img {
+                    position: absolute;
+                    width: 50%;
+                    left: -30px;
+                    top: -20px;
+                }
+            }
         }
     }
 }
 
-
-}
-
-@media (max-width: 480px) {}

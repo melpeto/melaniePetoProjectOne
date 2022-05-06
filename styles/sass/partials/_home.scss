@@ -6,7 +6,7 @@
         justify-content: center;
         align-items: center;
         .headerTitle {
-            margin-right: 100px;
+            margin-right: 75px;
             margin-left: 50px;
             position: relative;
             h1 {
@@ -21,7 +21,7 @@
         }
         .headerImg {
             box-shadow: 15px 15px white;
-            margin-left: 100px;
+            margin-left: 50px;
             position: relative;
             top: 50px;
         }
@@ -59,7 +59,7 @@
 .features {
     display: flex;
     .textContainer {
-        width: calc(50% - 75px);
+        max-width: calc(50% - 75px);
     }
     .imgContainer {
         z-index: 10;
@@ -155,22 +155,44 @@
     .wrapper {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+            .imgContainer {
+                max-width: 20%;
+            
+                img {
+                    box-shadow: 15px 15px $primary;
+                }
+            }
+            
+            .textContainer {
+                max-width: 80%;
+                padding: 100px 0px 100px 75px;
+            }
     }
-    .imgContainer {
-        max-width: 20%;
-        img {
-            box-shadow: 15px 15px $primary;
-        }
-    }
-    .textContainer {
-        max-width: 80%;
-        padding: 100px;
-    }
+
 }
 
 .gallery {
     ul {
         display: flex;
-        justify-content: space-between;
+        // flex-wrap: wrap;
+        justify-content: center;
+        padding: 75px 0;
+        li {
+            max-width: calc(30% - 30px);
+            // min-width: 300px;
+            margin: 15px;
+        }
+    }
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    // font-weight: lighter;
+    padding: 15px;
+    p {
+        margin: 0;
     }
 }
