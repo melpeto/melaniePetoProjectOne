@@ -1,0 +1,93 @@
+.blogBody {
+    background-color: $lightBackground;
+}
+
+.headerBlog {
+    background-image: url(../assets/blog-image-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    position: relative;
+    h1 {
+        position: absolute;
+        bottom: -60px;
+    }
+}
+
+.blogFlexParent {
+    display: flex;
+    padding: 50px 0px;
+    .aboutAndPosts {
+        max-width: 30%;
+        margin-top: 50px;
+        aside,
+        section {
+            background-color: white;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            padding: 30px;
+        }
+    }
+    .mainPost {
+        max-width: 70%;
+        margin-top: 50px;
+        article {
+            background-color: white;
+            padding: 30px;
+            border-bottom: 5px solid $primary;
+            margin-bottom: 30px;;
+        }
+        article:nth-child(2) {
+            border-bottom: none;
+        }
+    }
+}
+
+.recent li::before {
+    content: "\2022";
+    color: $primary;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.commentFlex {
+    display: flex;
+    .imgContainer {
+        max-width: 15%;
+    }
+    .textContainer {
+        max-width: 85%;
+    }
+}
+
+.blogCommentForm {
+    display: flex;
+    flex-wrap: wrap;
+
+    input[type="text"] {
+        width: calc(50% - 10px);
+        border: none;
+        padding: 20px;
+        margin-right: 10px;
+        font-style: italic;
+    }
+    input[type="email"] {
+        width: 50%;
+        border: none;
+        padding: 20px;
+        font-style: italic;
+    }
+    textarea {
+        width: 100%;
+        margin: 20px 0px;
+        border: none;
+        padding: 20px;
+        font-style: italic;
+        height: 245px;
+    }
+    button {
+        width: 100%;
+        margin: 20px 0px;
+        border: none;
+    }
+}

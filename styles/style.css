@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400;700&display=swap");
 /* site fonts */
 /* if we set our root element font-size to 125%, then 1 rem = 20px */
@@ -244,6 +245,8 @@ button,
 .button {
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -265,13 +268,11 @@ ul.topNavFlex {
 }
 
 h2 {
-  margin: 0;
   font-size: 2.1rem;
   letter-spacing: 1px;
 }
 
 h3 {
-  margin: 0;
   font-size: 1.6rem;
 }
 
@@ -322,6 +323,7 @@ button,
   background-color: rgba(5, 174, 193, 0.7);
   padding: 10px 20px;
   margin: 20px;
+  border: none;
 }
 
 .topNav {
@@ -567,6 +569,106 @@ footer p {
   margin: 0;
 }
 
+.blogBody {
+  background-color: #f0efed;
+}
+
+.headerBlog {
+  background-image: url(../assets/blog-image-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  position: relative;
+}
+.headerBlog h1 {
+  position: absolute;
+  bottom: -60px;
+}
+
+.blogFlexParent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 0px;
+}
+.blogFlexParent .aboutAndPosts {
+  max-width: 30%;
+  margin-top: 50px;
+}
+.blogFlexParent .aboutAndPosts aside,
+.blogFlexParent .aboutAndPosts section {
+  background-color: white;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  padding: 30px;
+}
+.blogFlexParent .mainPost {
+  max-width: 70%;
+  margin-top: 50px;
+}
+.blogFlexParent .mainPost article {
+  background-color: white;
+  padding: 30px;
+  border-bottom: 5px solid #f6a823;
+  margin-bottom: 30px;
+}
+.blogFlexParent .mainPost article:nth-child(2) {
+  border-bottom: none;
+}
+
+.recent li::before {
+  content: "•";
+  color: #f6a823;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.commentFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.commentFlex .imgContainer {
+  max-width: 15%;
+}
+.commentFlex .textContainer {
+  max-width: 85%;
+}
+
+.blogCommentForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.blogCommentForm input[type=text] {
+  width: calc(50% - 10px);
+  border: none;
+  padding: 20px;
+  margin-right: 10px;
+  font-style: italic;
+}
+.blogCommentForm input[type=email] {
+  width: 50%;
+  border: none;
+  padding: 20px;
+  font-style: italic;
+}
+.blogCommentForm textarea {
+  width: 100%;
+  margin: 20px 0px;
+  border: none;
+  padding: 20px;
+  font-style: italic;
+  height: 245px;
+}
+.blogCommentForm button {
+  width: 100%;
+  margin: 20px 0px;
+  border: none;
+}
+
 @media (max-width: 1024px) {
   .topNav {
     height: 100px;
@@ -686,6 +788,74 @@ footer p {
   .gallery ul li {
     max-width: 100%;
     margin: 15px 50px;
+  }
+
+  .blogFlexParent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 25px 0px;
+  }
+  .blogFlexParent .aboutAndPosts {
+    max-width: 100%;
+    margin-top: 25px;
+  }
+  .blogFlexParent .aboutAndPosts aside,
+.blogFlexParent .aboutAndPosts section {
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 30px;
+  }
+  .blogFlexParent .mainPost {
+    max-width: 100%;
+    margin-top: 25px;
+  }
+  .blogFlexParent .mainPost article {
+    padding: 30px;
+    border-bottom: 5px solid #f6a823;
+    margin-bottom: 30px;
+  }
+  .blogFlexParent .mainPost article:nth-child(2) {
+    border-bottom: none;
+  }
+
+  .commentFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+  }
+  .commentFlex .imgContainer {
+    max-width: 50%;
+  }
+  .commentFlex .textContainer {
+    max-width: 100%;
+  }
+
+  .blogCommentForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .blogCommentForm input[type=text] {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .blogCommentForm input[type=email] {
+    width: 100%;
   }
 }
 @media (max-width: 480px) {
