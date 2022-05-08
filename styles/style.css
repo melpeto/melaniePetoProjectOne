@@ -253,6 +253,10 @@ h1 {
   font-size: 4rem;
 }
 
+.headerTitle h1 {
+  font-size: 6rem;
+}
+
 .logo {
   font-size: 2.1rem;
 }
@@ -270,6 +274,7 @@ ul.topNavFlex {
 h2 {
   font-size: 2.1rem;
   letter-spacing: 1px;
+  line-height: 40px;
 }
 
 h3 {
@@ -288,6 +293,46 @@ button {
 .selected {
   font-size: 1.2rem;
   color: rgb(246, 246, 246);
+}
+
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 15px;
+  font-size: 1rem;
+  background-color: #f6a823;
+  border-radius: 50%;
+  height: 40px;
+  width: 50px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.imageIcon::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f03e";
+}
+
+.userIcon::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f007";
+}
+
+.desktopIcon::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f108";
+}
+
+.phoneIcon::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f095";
 }
 
 .wrapper {
@@ -322,7 +367,7 @@ button,
   line-height: 32px;
   background-color: rgba(5, 174, 193, 0.7);
   padding: 10px 20px;
-  margin: 20px;
+  margin: 20px 20px 20px 0;
   border: none;
 }
 
@@ -334,6 +379,7 @@ button,
   display: none;
   font-size: 1.5rem;
   padding-top: 35px;
+  width: 30px;
 }
 .topNav .topNavFlex {
   display: -webkit-box;
@@ -371,9 +417,6 @@ button,
   margin-right: 75px;
   margin-left: 50px;
   position: relative;
-}
-.headerHome .headerFlexParent .headerTitle h1 {
-  font-size: 6rem;
 }
 .headerHome .headerFlexParent .headerTitle img {
   position: absolute;
@@ -470,46 +513,6 @@ button,
   margin-left: 65px;
 }
 
-.icon::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  margin-right: 15px;
-  font-size: 1rem;
-  background-color: #f6a823;
-  border-radius: 50%;
-  height: 40px;
-  width: 50px;
-  text-align: center;
-  padding-top: 10px;
-}
-
-.imageIcon::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f03e";
-}
-
-.userIcon::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f007";
-}
-
-.desktopIcon::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f108";
-}
-
-.phoneIcon::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f095";
-}
-
 .journey {
   background-color: #f0efed;
 }
@@ -557,16 +560,6 @@ button,
 .gallery ul li {
   max-width: calc(30% - 30px);
   margin: 15px;
-}
-
-footer {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-footer p {
-  margin: 0;
 }
 
 .blogBody {
@@ -669,6 +662,16 @@ footer p {
   border: none;
 }
 
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+footer p {
+  margin: 0;
+}
+
 @media (max-width: 1024px) {
   .topNav {
     height: 100px;
@@ -679,16 +682,13 @@ footer p {
   .topNav .wrapper .hamburgerMenu {
     display: block;
   }
-  .topNav .topNavFlex {
+  .topNav .wrapper .topNavFlex {
     background-color: #f0efed;
     position: absolute;
     height: 0;
     overflow: hidden;
     top: 0;
     left: 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -698,21 +698,18 @@ footer p {
             align-items: left;
     margin: 0 auto;
     padding: 0;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
-  .topNav .topNavFlex li {
-    margin: 0 15px;
-    padding: 15px;
-  }
-  .topNav .topNavFlex a {
-    padding: 15px;
-  }
-  .topNav i:hover .topNavFlex,
-.topNav i:focus .topNavFlex,
-.topNav i:active .topNavFlex {
+  .topNav .wrapper .hamburgerMenu:hover + ul.topNavFlex,
+.topNav .wrapper .hamburgerMenu:focus + ul.topNavFlex,
+.topNav .wrapper .hamburgerMenu:focus-within + ul.topNavFlex {
     height: auto;
+    overflow: auto;
+    z-index: 20;
+  }
+  .topNav .wrapper .hamburgerMenu:hover + ul.topNavFlex li.selected,
+.topNav .wrapper .hamburgerMenu:focus + ul.topNavFlex li.selected,
+.topNav .wrapper .hamburgerMenu:focus-within + ul.topNavFlex li.selected {
+    color: black;
   }
 
   .headerHome .headerFlexParent {
@@ -723,20 +720,20 @@ footer p {
   }
   .headerHome .headerFlexParent .headerTitle {
     margin-right: 50px;
-    margin-left: 50px;
   }
   .headerHome .headerFlexParent .headerImg {
     margin-left: 0px;
     position: static;
     margin-bottom: 100px;
-    -ms-flex-negative: 1;
-        flex-shrink: 1;
   }
 
   .whoIsSophie {
     text-align: center;
   }
 
+  .featureSection {
+    text-align: center;
+  }
   .featureSection .redBox,
 .featureSection .orangeBox {
     display: none;
@@ -749,20 +746,27 @@ footer p {
   }
   .featureSection .features .textContainer {
     max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
-
-  .journey .wrapper .imgContainer {
-    max-width: 40%;
-  }
-  .journey .wrapper .textContainer {
-    max-width: 60%;
-    padding: 100px 25px;
-  }
-
-  .gallery ul li {
-    max-width: 50%;
+  .featureSection .features .imgContainer {
+    margin-top: 15px;
+    margin-bottom: 30px;
   }
 }
+.journey .wrapper .imgContainer {
+  max-width: 40%;
+}
+.journey .wrapper .textContainer {
+  max-width: calc(60% - 15px);
+  padding: 100px 25px;
+  margin-left: 15px;
+}
+
+.gallery ul li {
+  max-width: 50%;
+}
+
 @media (max-width: 768px) {
   .headerHome .headerFlexParent .headerTitle h1 {
     font-size: 4.5rem;

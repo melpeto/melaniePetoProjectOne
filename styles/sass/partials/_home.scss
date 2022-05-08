@@ -9,9 +9,6 @@
             margin-right: 75px;
             margin-left: 50px;
             position: relative;
-            h1 {
-                font-size: 6rem;
-            }
             img {
                 position: absolute;
                 width: 50%;
@@ -101,45 +98,45 @@
     }
 }
 
-.icon::before {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    margin-right: 15px;
-    font-size: 1rem;
-    background-color: $primary;
-    border-radius: 50%;
-    height: 40px;
-    width: 50px;
-    text-align: center;
-    padding-top: 10px;
-}
+// .icon::before {
+//     display: inline-block;
+//     font-style: normal;
+//     font-variant: normal;
+//     text-rendering: auto;
+//     -webkit-font-smoothing: antialiased;
+//     margin-right: 15px;
+//     font-size: 1rem;
+//     background-color: $primary;
+//     border-radius: 50%;
+//     height: 40px;
+//     width: 50px;
+//     text-align: center;
+//     padding-top: 10px;
+// }
 
-.imageIcon::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f03e";
-}
+// .imageIcon::before {
+//     font-family: "Font Awesome 5 Free";
+//     font-weight: 900;
+//     content: "\f03e";
+// }
 
-.userIcon::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f007";
-}
+// .userIcon::before {
+//     font-family: "Font Awesome 5 Free";
+//     font-weight: 900;
+//     content: "\f007";
+// }
 
-.desktopIcon::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f108";
-}
+// .desktopIcon::before {
+//     font-family: "Font Awesome 5 Free";
+//     font-weight: 900;
+//     content: "\f108";
+// }
 
-.phoneIcon::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f095";
-}
+// .phoneIcon::before {
+//     font-family: "Font Awesome 5 Free";
+//     font-weight: 900;
+//     content: "\f095";
+// }
 
 .journey {
     background-color: $lightBackground;
@@ -175,24 +172,11 @@
 .gallery {
     ul {
         display: flex;
-        // flex-wrap: wrap;
         justify-content: center;
         padding: 75px 0;
         li {
             max-width: calc(30% - 30px);
-            // min-width: 300px;
             margin: 15px;
         }
-    }
-}
-
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    // font-weight: lighter;
-    padding: 15px;
-    p {
-        margin: 0;
     }
 }

@@ -24,34 +24,32 @@
             .hamburgerMenu {
                 display: block;
             }
-        }
-        .topNavFlex {
-            background-color: $lightBackground;
-            position: absolute;
-            height: 0;
-            overflow: hidden;
-            top: 0;
-            left: 0px;
-            display: flex;
-            flex-direction: column;
-            align-items: left;
-            margin: 0 auto;
-            padding: 0;
-            justify-content: center;
-    
-            li {
-                margin: 0 15px;
-                padding: 15px;
+
+//  ==== HOVER NOT WORKING!! WHYYY 
+            .topNavFlex {
+                background-color: $lightBackground;
+                position: absolute;
+                height: 0;
+                overflow: hidden;
+                top: 0;
+                left: 0px;
+                flex-direction: column;
+                align-items: left;
+                margin: 0 auto;
+                padding: 0;
+            }    
+            .hamburgerMenu:hover + ul.topNavFlex,
+            .hamburgerMenu:focus + ul.topNavFlex,
+            .hamburgerMenu:focus-within + ul.topNavFlex {
+            // i:focus .topNavFlex,
+            // i:active .topNavFlex {
+                height: auto;
+                overflow: auto;
+                z-index: 20;
+                li.selected {
+                    color: black;
+                }
             }
-    
-            a {
-                padding: 15px;
-            }
-        }    
-        i:hover .topNavFlex,
-        i:focus .topNavFlex,
-        i:active .topNavFlex {
-            height: auto;
         }
     }
 
@@ -60,14 +58,11 @@
             flex-direction: column;
             .headerTitle {
                 margin-right: 50px;
-                margin-left: 50px;
             }
             .headerImg {
                 margin-left: 0px;
                 position: static;
-                // top: 0px;
                 margin-bottom: 100px;
-                flex-shrink: 1;
             }
         }
     }
@@ -77,6 +72,7 @@
     }
 
     .featureSection {
+        text-align: center;
         .redBox,
         .orangeBox {
             display: none;
@@ -85,7 +81,15 @@
             flex-direction: column;
             .textContainer {
                 max-width: 100%;
+                margin-left: 0;
+                margin-right: 0;
             }
+            .imgContainer {
+                margin-top: 15px;
+                margin-bottom: 30px;
+            }
+        }
+
         }
     }
 
@@ -95,8 +99,9 @@
                 max-width: 40%;
             }
             .textContainer {
-                max-width: 60%;
+                max-width: calc(60% - 15px);
                 padding: 100px 25px;
+                margin-left: 15px;
             }
         }
     }
@@ -110,9 +115,6 @@
             }
         }
     }
-
-
-}
 
 @media (max-width: 768px) {
 
