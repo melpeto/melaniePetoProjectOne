@@ -98,46 +98,6 @@
     }
 }
 
-// .icon::before {
-//     display: inline-block;
-//     font-style: normal;
-//     font-variant: normal;
-//     text-rendering: auto;
-//     -webkit-font-smoothing: antialiased;
-//     margin-right: 15px;
-//     font-size: 1rem;
-//     background-color: $primary;
-//     border-radius: 50%;
-//     height: 40px;
-//     width: 50px;
-//     text-align: center;
-//     padding-top: 10px;
-// }
-
-// .imageIcon::before {
-//     font-family: "Font Awesome 5 Free";
-//     font-weight: 900;
-//     content: "\f03e";
-// }
-
-// .userIcon::before {
-//     font-family: "Font Awesome 5 Free";
-//     font-weight: 900;
-//     content: "\f007";
-// }
-
-// .desktopIcon::before {
-//     font-family: "Font Awesome 5 Free";
-//     font-weight: 900;
-//     content: "\f108";
-// }
-
-// .phoneIcon::before {
-//     font-family: "Font Awesome 5 Free";
-//     font-weight: 900;
-//     content: "\f095";
-// }
-
 .journey {
     background-color: $lightBackground;
     &::before {

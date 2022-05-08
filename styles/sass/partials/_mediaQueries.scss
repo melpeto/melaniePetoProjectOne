@@ -1,57 +1,52 @@
-@media (max-width: 1200px) {
-
-// .headerHome {
-//     .headerFlexParent {
-//         .headerTitle {
-//             margin-right: 50px;
-//         }
-//         .headerImg {
-//             box-shadow: 15px 15px white;
-//             margin-left: 50px;
-//         }
-//     }
-// }
-
-
-}
+@media (max-width: 1200px) {}
 
 @media (max-width: 1024px) {
 
-    .topNav {
-        height: 100px;
-        .wrapper {
-            position: relative;
-            .hamburgerMenu {
-                display: block;
-            }
+//     .topNav {
+//         height: 100px;
+//         .wrapper {
+//             position: relative;
+//             // .hamburgerMenu::before {
+//             //     display: block;
+//             // }
 
-//  ==== HOVER NOT WORKING!! WHYYY 
+// //  ==== HOVER NOT WORKING!! WHYYY 
+    .topNav {
+        position: relative;
+        .wrapper {
             .topNavFlex {
                 background-color: $lightBackground;
                 position: absolute;
                 height: 0;
                 overflow: hidden;
-                top: 0;
+                top: 0px;
                 left: 0px;
                 flex-direction: column;
                 align-items: left;
-                margin: 0 auto;
+                margin: 0;
                 padding: 0;
-            }    
+                z-index: 20;
+                li:hover,
+                li:focus-within {
+                    color: $primary;
+                }
+            }
+            .hamburgerMenu {
+                display: inline-block;
+            }
             .hamburgerMenu:hover + ul.topNavFlex,
             .hamburgerMenu:focus + ul.topNavFlex,
             .hamburgerMenu:focus-within + ul.topNavFlex {
-            // i:focus .topNavFlex,
-            // i:active .topNavFlex {
                 height: auto;
-                overflow: auto;
-                z-index: 20;
-                li.selected {
-                    color: black;
-                }
+                overflow: visible;
+                // li.selected {
+                //     color: black;
+                // }
             }
+
         }
-    }
+    }   
+    
 
     .headerHome {
         .headerFlexParent {
@@ -91,7 +86,6 @@
         }
 
         }
-    }
 
     .journey {
         .wrapper {
@@ -120,6 +114,7 @@
 
     .headerHome {
         .headerFlexParent {
+            padding-top: 30px;
             .headerTitle {
                 h1 {
                     font-size: 4.5rem;
@@ -132,6 +127,23 @@
         .linksFlexParent {
             li {
                 max-width: 100%;
+            }
+        }
+    }
+
+    .journey {
+        .wrapper { 
+            flex-direction: column;
+            .imgContainer {
+                max-width: 100%;
+                margin-top: 50px;
+            }
+            
+            .textContainer {
+                max-width: 100%;
+                padding: 100px 25px;
+                text-align: center;
+                // margin-left: 15px;
             }
         }
     }
@@ -234,3 +246,4 @@
     }
 }
 
+}
