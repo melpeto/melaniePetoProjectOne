@@ -291,8 +291,14 @@ button {
 }
 
 .selected {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: rgb(246, 246, 246);
+}
+
+.inlineAccents {
+  color: #285e64;
+  font-weight: bolder;
+  font-style: italic;
 }
 
 .icon::before {
@@ -378,8 +384,8 @@ button,
 .topNav .wrapper .hamburgerMenu {
   display: none;
   font-size: 2rem;
-  padding-top: 35px;
-  width: 30px;
+  padding: 35px;
+  width: 50px;
 }
 .topNav .topNavFlex {
   display: -webkit-box;
@@ -469,11 +475,11 @@ button,
   max-width: calc(50% - 75px);
 }
 .features .imgContainer {
-  z-index: 10;
+  z-index: 20;
 }
 
 .featureOne {
-  margin-bottom: 75px;
+  margin-bottom: 30px;
 }
 .featureOne .textContainer {
   margin-left: 75px;
@@ -481,6 +487,7 @@ button,
 }
 
 .featureTwo {
+  margin-top: 30px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -488,6 +495,8 @@ button,
 }
 .featureTwo .textContainer {
   margin-right: 75px;
+  margin-bottom: 30px;
+  padding-top: 50px;
 }
 
 .links {
@@ -562,10 +571,6 @@ button,
   margin: 15px;
 }
 
-.blogBody {
-  background-color: #f0efed;
-}
-
 .headerBlog {
   background-image: url(../assets/blog-image-1.jpg);
   background-repeat: no-repeat;
@@ -576,6 +581,10 @@ button,
 .headerBlog h1 {
   position: absolute;
   bottom: -60px;
+}
+
+.blogBody {
+  background-color: #f0efed;
 }
 
 .blogFlexParent {
@@ -595,6 +604,9 @@ button,
   margin-bottom: 20px;
   padding: 30px;
 }
+.blogFlexParent .aboutAndPosts h4 {
+  margin-top: 25px;
+}
 .blogFlexParent .mainPost {
   max-width: 70%;
   margin-top: 50px;
@@ -607,6 +619,10 @@ button,
 }
 .blogFlexParent .mainPost article:nth-child(2) {
   border-bottom: none;
+}
+
+.recent ul {
+  margin-top: 20px;
 }
 
 .recent li::before {
@@ -623,6 +639,7 @@ button,
 }
 .commentFlex .imgContainer {
   max-width: 15%;
+  margin-right: 20px;
 }
 .commentFlex .textContainer {
   max-width: 85%;
@@ -673,6 +690,10 @@ footer p {
 }
 
 @media (max-width: 1024px) {
+  .selected {
+    color: black;
+  }
+
   .topNav {
     position: relative;
   }
@@ -693,6 +714,10 @@ footer p {
     margin: 0;
     padding: 0;
     z-index: 20;
+  }
+  .topNav .wrapper .topNavFlex:hover, .topNav .wrapper .topNavFlex:focus, .topNav .wrapper .topNavFlex:focus-within {
+    height: auto;
+    overflow: visible;
   }
   .topNav .wrapper .topNavFlex li:hover,
 .topNav .wrapper .topNavFlex li:focus-within {
@@ -751,16 +776,29 @@ footer p {
   }
 
   .journey .wrapper .imgContainer {
-    max-width: 40%;
+    max-width: 30%;
   }
   .journey .wrapper .textContainer {
-    max-width: calc(60% - 15px);
+    max-width: calc(70% - 15px);
     padding: 100px 25px;
     margin-left: 15px;
   }
 
   .gallery ul li {
     max-width: 50%;
+  }
+
+  .headerBlog {
+    background-image: url(../assets/blog-image-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    position: relative;
+  }
+  .headerBlog h1 {
+    position: static;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 @media (max-width: 1024px) and (max-width: 768px) {
@@ -810,9 +848,6 @@ footer p {
   }
 
   .blogFlexParent {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -826,26 +861,20 @@ footer p {
   .blogFlexParent .aboutAndPosts aside,
 .blogFlexParent .aboutAndPosts section {
     margin-right: auto;
-    margin-bottom: 20px;
-    padding: 30px;
+  }
+  .blogFlexParent .aboutAndPosts .imgContainer {
+    max-width: 80%;
+    margin: 25px auto;
+  }
+  .blogFlexParent .aboutAndPosts h4 {
+    text-align: center;
   }
   .blogFlexParent .mainPost {
     max-width: 100%;
     margin-top: 25px;
   }
-  .blogFlexParent .mainPost article {
-    padding: 30px;
-    border-bottom: 5px solid #f6a823;
-    margin-bottom: 30px;
-  }
-  .blogFlexParent .mainPost article:nth-child(2) {
-    border-bottom: none;
-  }
 
   .commentFlex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -855,19 +884,12 @@ footer p {
             align-items: left;
   }
   .commentFlex .imgContainer {
-    max-width: 50%;
+    max-width: 30%;
   }
   .commentFlex .textContainer {
     max-width: 100%;
   }
 
-  .blogCommentForm {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
   .blogCommentForm input[type=text] {
     width: 100%;
     margin-right: 0px;

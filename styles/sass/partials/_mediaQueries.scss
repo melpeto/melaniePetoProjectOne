@@ -1,16 +1,12 @@
-@media (max-width: 1200px) {}
 
 @media (max-width: 1024px) {
 
-//     .topNav {
-//         height: 100px;
-//         .wrapper {
-//             position: relative;
-//             // .hamburgerMenu::before {
-//             //     display: block;
-//             // }
+// ===== GLOBAL =====
 
-// //  ==== HOVER NOT WORKING!! WHYYY 
+    .selected {
+        color: black;
+    }
+
     .topNav {
         position: relative;
         .wrapper {
@@ -26,6 +22,12 @@
                 margin: 0;
                 padding: 0;
                 z-index: 20;
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    height: auto;
+                    overflow: visible;
+                }
                 li:hover,
                 li:focus-within {
                     color: $primary;
@@ -39,14 +41,11 @@
             .hamburgerMenu:focus-within + ul.topNavFlex {
                 height: auto;
                 overflow: visible;
-                // li.selected {
-                //     color: black;
-                // }
             }
-
         }
     }   
     
+// ===== HOME PAGE =====
 
     .headerHome {
         .headerFlexParent {
@@ -90,18 +89,16 @@
     .journey {
         .wrapper {
             .imgContainer {
-                max-width: 40%;
+                max-width: 30%;
             }
             .textContainer {
-                max-width: calc(60% - 15px);
+                max-width: calc(70% - 15px);
                 padding: 100px 25px;
                 margin-left: 15px;
             }
         }
     }
 
-
-    // HOME - BOTTOM SQUARE PIC GALLERY
     .gallery {
         ul {
             li {
@@ -110,7 +107,26 @@
         }
     }
 
+// ===== BLOG PAGE =====
+
+    .headerBlog {
+        background-image: url(../assets/blog-image-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 400px;
+        position: relative;
+    
+        h1 {
+            position: static;
+            margin: 0 auto;
+            text-align: center;
+            // bottom: -60px;
+        }
+    }
+
 @media (max-width: 768px) {
+
+// ===== HOME PAGE =====
 
     .headerHome {
         .headerFlexParent {
@@ -152,57 +168,49 @@
         ul {
             display: flex;
             flex-direction: column;
-            // flex-wrap: wrap;
             justify-content: center;
             padding: 75px 0;
     
             li {
                 max-width: 100%;
-                // min-width: 300px;
                 margin: 15px 50px;
             }
         }
     }
 
+// ===== BLOG PAGE =====
+
+
     .blogFlexParent {
-        display: flex;
         flex-direction: column;
         padding: 25px 0px;
         .aboutAndPosts {
             max-width: 100%;
             margin-top: 25px;
-    
             aside,
             section {
                 margin-right: auto;
-                margin-bottom: 20px;
-                padding: 30px;
+            }
+            .imgContainer {
+                max-width: 80%;
+                margin: 25px auto;
+            }
+            h4 {
+                text-align: center;
             }
         }
     
         .mainPost {
             max-width: 100%;
-            margin-top: 25px;
-    
-            article {
-                padding: 30px;
-                border-bottom: 5px solid $primary;
-                margin-bottom: 30px;
-                ;
-            }
-    
-            article:nth-child(2) {
-                border-bottom: none;
-            }
+            margin-top: 25px;    
         }
     }
 
     .commentFlex {
-        display: flex;
         flex-direction: column;
         align-items: left;
         .imgContainer {
-            max-width: 50%;
+            max-width: 30%;
         }
     
         .textContainer {
@@ -211,8 +219,6 @@
     }
 
     .blogCommentForm {
-        display: flex;
-        flex-wrap: wrap;
         input[type="text"] {
             width: 100%;
             margin-right: 0px;

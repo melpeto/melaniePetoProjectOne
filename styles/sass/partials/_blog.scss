@@ -1,6 +1,5 @@
-.blogBody {
-    background-color: $lightBackground;
-}
+
+// HEADER
 
 .headerBlog {
     background-image: url(../assets/blog-image-1.jpg);
@@ -12,6 +11,12 @@
         position: absolute;
         bottom: -60px;
     }
+}
+
+// BODY
+
+.blogBody {
+    background-color: $lightBackground;
 }
 
 .blogFlexParent {
@@ -26,6 +31,9 @@
             margin-right: 30px;
             margin-bottom: 20px;
             padding: 30px;
+        }
+        h4 {
+            margin-top: 25px;
         }
     }
     .mainPost {
@@ -43,6 +51,10 @@
     }
 }
 
+.recent ul {
+    margin-top: 20px;
+}
+
 .recent li::before {
     content: "\2022";
     color: $primary;
@@ -50,15 +62,20 @@
     margin-right: 15px;
 }
 
+//  COMMENT SECTION
+
 .commentFlex {
     display: flex;
     .imgContainer {
         max-width: 15%;
+        margin-right: 20px;
     }
     .textContainer {
         max-width: 85%;
     }
 }
+
+// FORM 
 
 .blogCommentForm {
     display: flex;
