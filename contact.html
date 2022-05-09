@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/c79ccdb0d2.js" crossorigin="anonymous"></script>
     
 </head>
-<body>
+<body class="contactBody">
     
     <nav class="topNav">
         <div class="wrapper">
@@ -24,8 +24,10 @@
         </div>
     </nav>
     
-    <header>
-        <h1>Get in Touch</h1>
+    <header class="headerContact">
+        <div class="wrapper">
+            <h1>Get in Touch</h1>
+        </div>
     </header>
 
     <main>
@@ -40,12 +42,12 @@
                         <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                     </ul>
-                    <p>info@email.com</p>
-                    <p>123-456-7890 <span>123 Queen Street West, Unit 10</span> <span>Toronto, Ontario</span> <span>M5V 2D5</span></p>
+                    <p class="bold">info@email.com</p>
+                    <p>123-456-7890<span>123 Queen Street West, Unit 10</span><span>Toronto, Ontario</span><span>M5V 2D5</span></p>
                 </nav>
             </section>
 
-            <form action="GET" class="blogCommentForm">
+            <form action="GET" class="contactForm">
                 <label for="name" class="sr-only">Provide your name</label>
                 <input type="text" id="name" placeholder="Name">
             
@@ -53,10 +55,10 @@
                 <input type="email" id="email" placeholder="Email address">
             
                 <label for="comment" class="sr-only">Write a comment</label>
-                <textarea name="comment" id="comment" placeholder="Comment" cols="30" rows="10" maxlength="50"></textarea>
+                <textarea name="comment" id="comment" placeholder="Message" cols="30" rows="10" maxlength="50"></textarea>
             
                 <label for="submit" class="sr-only">Submit comment</label>
-                <button type="submit" id="submit">Post Comment</button>
+                <button type="submit" id="submit">Submit</button>
             </form>
 
         </div>

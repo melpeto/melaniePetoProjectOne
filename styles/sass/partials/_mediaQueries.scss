@@ -99,28 +99,20 @@
         }
     }
 
-    .gallery {
-        ul {
-            li {
-                max-width: 50%;
-            }
-        }
+    .gallery ul li {
+        max-width: 50%;
     }
 
-// ===== BLOG PAGE =====
 
-    .headerBlog {
-        background-image: url(../assets/blog-image-1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 400px;
-        position: relative;
-    
+// ===== BLOG PAGE & CONTACT PAGE =====
+
+    .headerBlog,
+    .headerContact {
         h1 {
             position: static;
             margin: 0 auto;
             text-align: center;
-            // bottom: -60px;
+            line-height: 4rem;
         }
     }
 
@@ -139,12 +131,8 @@
         }
     }
 
-    .links {
-        .linksFlexParent {
-            li {
-                max-width: 100%;
-            }
-        }
+    .links .linksFlexParent li {
+        max-width: 100%;
     }
 
     .journey {

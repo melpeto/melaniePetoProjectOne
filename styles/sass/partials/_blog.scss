@@ -62,7 +62,7 @@
     margin-right: 15px;
 }
 
-//  COMMENT SECTION
+//  READER COMMENT SECTION
 
 .commentFlex {
     display: flex;
@@ -72,39 +72,5 @@
     }
     .textContainer {
         max-width: 85%;
-    }
-}
-
-// FORM 
-
-.blogCommentForm {
-    display: flex;
-    flex-wrap: wrap;
-
-    input[type="text"] {
-        width: calc(50% - 10px);
-        border: none;
-        padding: 20px;
-        margin-right: 10px;
-        font-style: italic;
-    }
-    input[type="email"] {
-        width: 50%;
-        border: none;
-        padding: 20px;
-        font-style: italic;
-    }
-    textarea {
-        width: 100%;
-        margin: 20px 0px;
-        border: none;
-        padding: 20px;
-        font-style: italic;
-        height: 245px;
-    }
-    button {
-        width: 100%;
-        margin: 20px 0px;
-        border: none;
     }
 }

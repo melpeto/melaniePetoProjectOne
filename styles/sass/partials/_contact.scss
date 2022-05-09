@@ -1,0 +1,52 @@
+.headerContact {
+    background-image: url(../assets/contact-image-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    position: relative;
+
+    h1 {
+        position: absolute;
+        bottom: -60px;
+    }
+}
+
+// BODY
+
+.contactBody {
+    background-color: $lightBackground;
+}
+
+.contactFlex {
+    display: flex;
+    margin-top: 100px;
+    span {
+        display: block;
+    }
+    .contactInfo {
+        background-color: white;
+        margin-right: 30px;
+        padding: 20px;
+        align-self: start;
+        max-width: calc(30% - 30px);
+        .bold {
+            font-weight: bolder;
+        }
+    }
+    .contactForm {
+        max-width: 70%;
+        margin-bottom: 150px;
+    }
+}
+
+
+.socialFlex {
+    display: flex;
+    font-size: 1.5rem;
+    i {
+        color: $primary;
+    }
+    a {
+        padding: 15px;
+    }
+}

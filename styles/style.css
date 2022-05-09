@@ -405,6 +405,45 @@ button,
   padding: 15px;
 }
 
+.blogCommentForm,
+.contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.blogCommentForm input[type=text],
+.contactForm input[type=text] {
+  width: calc(50% - 10px);
+  border: none;
+  padding: 20px;
+  margin-right: 10px;
+  font-style: italic;
+}
+.blogCommentForm input[type=email],
+.contactForm input[type=email] {
+  width: 50%;
+  border: none;
+  padding: 20px;
+  font-style: italic;
+}
+.blogCommentForm textarea,
+.contactForm textarea {
+  width: 100%;
+  margin: 20px 0px;
+  border: none;
+  padding: 20px;
+  font-style: italic;
+  height: 245px;
+}
+.blogCommentForm button,
+.contactForm button {
+  width: 100%;
+  margin: 20px 0px;
+  border: none;
+}
+
 .headerHome {
   background-color: #f6a823;
 }
@@ -645,38 +684,58 @@ button,
   max-width: 85%;
 }
 
-.blogCommentForm {
+.headerContact {
+  background-image: url(../assets/contact-image-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  position: relative;
+}
+.headerContact h1 {
+  position: absolute;
+  bottom: -60px;
+}
+
+.contactBody {
+  background-color: #f0efed;
+}
+
+.contactFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  margin-top: 100px;
 }
-.blogCommentForm input[type=text] {
-  width: calc(50% - 10px);
-  border: none;
+.contactFlex span {
+  display: block;
+}
+.contactFlex .contactInfo {
+  background-color: white;
+  margin-right: 30px;
   padding: 20px;
-  margin-right: 10px;
-  font-style: italic;
+  -ms-flex-item-align: start;
+      align-self: start;
+  max-width: calc(30% - 30px);
 }
-.blogCommentForm input[type=email] {
-  width: 50%;
-  border: none;
-  padding: 20px;
-  font-style: italic;
+.contactFlex .contactInfo .bold {
+  font-weight: bolder;
 }
-.blogCommentForm textarea {
-  width: 100%;
-  margin: 20px 0px;
-  border: none;
-  padding: 20px;
-  font-style: italic;
-  height: 245px;
+.contactFlex .contactForm {
+  max-width: 70%;
+  margin-bottom: 150px;
 }
-.blogCommentForm button {
-  width: 100%;
-  margin: 20px 0px;
-  border: none;
+
+.socialFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+}
+.socialFlex i {
+  color: #f6a823;
+}
+.socialFlex a {
+  padding: 15px;
 }
 
 footer {
@@ -788,17 +847,12 @@ footer p {
     max-width: 50%;
   }
 
-  .headerBlog {
-    background-image: url(../assets/blog-image-1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 400px;
-    position: relative;
-  }
-  .headerBlog h1 {
+  .headerBlog h1,
+.headerContact h1 {
     position: static;
     margin: 0 auto;
     text-align: center;
+    line-height: 4rem;
   }
 }
 @media (max-width: 1024px) and (max-width: 768px) {
