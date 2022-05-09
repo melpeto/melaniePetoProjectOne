@@ -109,12 +109,39 @@
     .headerBlog,
     .headerContact {
         h1 {
-            position: static;
-            margin: 0 auto;
-            text-align: center;
+            // position: static;
+            // margin: 0 auto;
+            // text-align: center;
             line-height: 4rem;
+            bottom: -80px;
         }
     }
+
+    .contactFlex {
+        .contactInfo {
+            margin-right: 30px;
+            padding: 20px;
+            align-self: start;
+            max-width: calc(50% - 30px);
+        }
+        .contactForm {
+            max-width: 50%;
+            input[type="text"] {
+                width: 100%;
+                margin-right: 0px;
+                margin-bottom: 20px;
+            }
+            
+            input[type="email"] {
+                width: 100%;
+            }
+        }
+    }
+
+    .contactForm {
+        
+    }
+
 
 @media (max-width: 768px) {
 
@@ -217,6 +244,30 @@
         }
     }
 
+
+    // CONTACT
+
+.contactFlex {
+    flex-direction: column;
+    margin-top: 50px;
+    .contactInfo {
+        // margin: 30px 30px;
+        align-self: auto;
+        max-width: 100%;
+        text-align: center;
+        .socialFlex {
+            // something to move to middle
+        }
+        .bold {
+            font-weight: bolder;
+        }
+    }
+
+    .contactForm {
+        max-width: 100%;
+        margin-bottom: 150px;
+    }
+}
 
 }
 

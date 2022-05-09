@@ -711,17 +711,18 @@ button,
 }
 .contactFlex .contactInfo {
   background-color: white;
-  margin-right: 30px;
+  margin: 15px;
   padding: 20px;
   -ms-flex-item-align: start;
       align-self: start;
-  max-width: calc(30% - 30px);
+  max-width: calc(30% - 15px);
 }
 .contactFlex .contactInfo .bold {
   font-weight: bolder;
 }
 .contactFlex .contactForm {
-  max-width: 70%;
+  max-width: calc(70% - 15px);
+  margin: 15px;
   margin-bottom: 150px;
 }
 
@@ -849,10 +850,27 @@ footer p {
 
   .headerBlog h1,
 .headerContact h1 {
-    position: static;
-    margin: 0 auto;
-    text-align: center;
     line-height: 4rem;
+    bottom: -80px;
+  }
+
+  .contactFlex .contactInfo {
+    margin-right: 30px;
+    padding: 20px;
+    -ms-flex-item-align: start;
+        align-self: start;
+    max-width: calc(50% - 30px);
+  }
+  .contactFlex .contactForm {
+    max-width: 50%;
+  }
+  .contactFlex .contactForm input[type=text] {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .contactFlex .contactForm input[type=email] {
+    width: 100%;
   }
 }
 @media (max-width: 1024px) and (max-width: 768px) {
@@ -951,6 +969,27 @@ footer p {
   }
   .blogCommentForm input[type=email] {
     width: 100%;
+  }
+
+  .contactFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 50px;
+  }
+  .contactFlex .contactInfo {
+    -ms-flex-item-align: auto;
+        align-self: auto;
+    max-width: 100%;
+    text-align: center;
+  }
+  .contactFlex .contactInfo .bold {
+    font-weight: bolder;
+  }
+  .contactFlex .contactForm {
+    max-width: 100%;
+    margin-bottom: 150px;
   }
 }
 @media (max-width: 1024px) and (max-width: 480px) {

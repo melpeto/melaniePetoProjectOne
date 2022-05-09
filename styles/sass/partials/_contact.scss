@@ -25,16 +25,18 @@
     }
     .contactInfo {
         background-color: white;
-        margin-right: 30px;
+        // margin-right: 30px;
+        margin: 15px;
         padding: 20px;
         align-self: start;
-        max-width: calc(30% - 30px);
+        max-width: calc(30% - 15px);
         .bold {
             font-weight: bolder;
         }
     }
     .contactForm {
-        max-width: 70%;
+        max-width: calc(70% - 15px);
+        margin: 15px;
         margin-bottom: 150px;
     }
 }
