@@ -1,9 +1,8 @@
 
-/* site fonts */
 $headingFont: 'Lora', serif;
 $bodyFont: 'Roboto', sans-serif;
 
-/* if we set our root element font-size to 125%, then 1 rem = 20px */
+/* html fontize: 125%, 1 rem = 20px */
 $baseFontSize: 1rem;
 
 $primary: #f6a823;
@@ -12,4 +11,3 @@ $basicText: #2c2c2c;
 $blogText: #285e64;
 $imgShadow: #a82706;
 $button: rgba(5, 174, 193, 0.7);
-// $dunno: #4f4f4f; grey

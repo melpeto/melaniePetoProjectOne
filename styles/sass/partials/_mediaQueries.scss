@@ -1,7 +1,7 @@
 
 @media (max-width: 1024px) {
 
-// ===== GLOBAL =====
+    // GLOBAL <1024
 
     .selected {
         color: black;
@@ -45,7 +45,7 @@
         }
     }   
     
-// ===== HOME PAGE =====
+    // HOME <1024
 
     .headerHome {
         .headerFlexParent {
@@ -104,14 +104,11 @@
     }
 
 
-// ===== BLOG PAGE & CONTACT PAGE =====
+    // BLOG & CONTACT <1024
 
     .headerBlog,
     .headerContact {
         h1 {
-            // position: static;
-            // margin: 0 auto;
-            // text-align: center;
             line-height: 4rem;
             bottom: -80px;
         }
@@ -120,8 +117,6 @@
     .contactFlex {
         .contactInfo {
             margin-right: 30px;
-            padding: 20px;
-            align-self: start;
             max-width: calc(50% - 30px);
         }
         .contactForm {
@@ -137,23 +132,17 @@
             }
         }
     }
-
-    .contactForm {
-        
-    }
-
+}
 
 @media (max-width: 768px) {
 
-// ===== HOME PAGE =====
+    // HOME <768
 
     .headerHome {
         .headerFlexParent {
             padding-top: 30px;
-            .headerTitle {
-                h1 {
-                    font-size: 4.5rem;
-                }
+            .headerTitle h1 {
+                font-size: 4.5rem;
             }
         }
     }
@@ -169,23 +158,17 @@
                 max-width: 100%;
                 margin-top: 50px;
             }
-            
             .textContainer {
                 max-width: 100%;
                 padding: 100px 25px;
                 text-align: center;
-                // margin-left: 15px;
             }
         }
     }
 
     .gallery {
         ul {
-            display: flex;
             flex-direction: column;
-            justify-content: center;
-            padding: 75px 0;
-    
             li {
                 max-width: 100%;
                 margin: 15px 50px;
@@ -193,8 +176,7 @@
         }
     }
 
-// ===== BLOG PAGE =====
-
+    // BLOG & CONTACT <768
 
     .blogFlexParent {
         flex-direction: column;
@@ -214,7 +196,6 @@
                 text-align: center;
             }
         }
-    
         .mainPost {
             max-width: 100%;
             margin-top: 25px;    
@@ -244,31 +225,25 @@
         }
     }
 
-
-    // CONTACT
-
-.contactFlex {
-    flex-direction: column;
-    margin-top: 50px;
-    .contactInfo {
-        // margin: 30px 30px;
-        align-self: auto;
-        max-width: 100%;
-        text-align: center;
-        .socialFlex {
-            // something to move to middle
+    .contactFlex {
+        flex-direction: column;
+        margin-top: 50px;
+        .contactInfo {
+            align-self: auto;
+            max-width: 100%;
+            text-align: center;
+            .socialFlex {
+                justify-content: center;
+            }
+            .bold {
+                font-weight: bolder;
+            }
         }
-        .bold {
-            font-weight: bolder;
+
+        .contactForm {
+            max-width: 100%;
         }
     }
-
-    .contactForm {
-        max-width: 100%;
-        margin-bottom: 150px;
-    }
-}
-
 }
 
 @media (max-width: 480px) {
@@ -281,14 +256,10 @@
                     font-size: 3rem;
                 }
                 img {
-                    position: absolute;
-                    width: 50%;
                     left: -30px;
                     top: -20px;
                 }
             }
         }
     }
-}
-
 }

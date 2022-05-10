@@ -1,7 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400;700&display=swap");
-/* site fonts */
-/* if we set our root element font-size to 125%, then 1 rem = 20px */
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -225,6 +223,7 @@ template {
   overflow: hidden;
 }
 
+/* html fontize: 125%, 1 rem = 20px */
 html {
   font-size: 125%;
 }
@@ -381,13 +380,7 @@ button,
   background-color: #f6a823;
   line-height: 29px;
 }
-.topNav .wrapper .hamburgerMenu {
-  display: none;
-  font-size: 2rem;
-  padding: 35px;
-  width: 50px;
-}
-.topNav .topNavFlex {
+.topNav .wrapper .topNavFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,12 +390,18 @@ button,
       -ms-flex-pack: center;
           justify-content: center;
 }
-.topNav .topNavFlex li {
+.topNav .wrapper .topNavFlex li {
   margin: 0 15px;
   padding: 15px;
 }
-.topNav .topNavFlex a {
+.topNav .wrapper .topNavFlex a {
   padding: 15px;
+}
+.topNav .wrapper .hamburgerMenu {
+  display: none;
+  font-size: 2rem;
+  padding: 35px;
+  width: 50px;
 }
 
 .blogCommentForm,
@@ -442,6 +441,16 @@ button,
   width: 100%;
   margin: 20px 0px;
   border: none;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+footer p {
+  margin: 0;
 }
 
 .headerHome {
@@ -677,7 +686,7 @@ button,
   display: flex;
 }
 .commentFlex .imgContainer {
-  max-width: 15%;
+  max-width: calc(15% - 20px);
   margin-right: 20px;
 }
 .commentFlex .textContainer {
@@ -737,16 +746,6 @@ button,
 }
 .socialFlex a {
   padding: 15px;
-}
-
-footer {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-footer p {
-  margin: 0;
 }
 
 @media (max-width: 1024px) {
@@ -856,9 +855,6 @@ footer p {
 
   .contactFlex .contactInfo {
     margin-right: 30px;
-    padding: 20px;
-    -ms-flex-item-align: start;
-        align-self: start;
     max-width: calc(50% - 30px);
   }
   .contactFlex .contactForm {
@@ -873,7 +869,7 @@ footer p {
     width: 100%;
   }
 }
-@media (max-width: 1024px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .headerHome .headerFlexParent {
     padding-top: 30px;
   }
@@ -902,17 +898,10 @@ footer p {
   }
 
   .gallery ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 75px 0;
   }
   .gallery ul li {
     max-width: 100%;
@@ -984,15 +973,19 @@ footer p {
     max-width: 100%;
     text-align: center;
   }
+  .contactFlex .contactInfo .socialFlex {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .contactFlex .contactInfo .bold {
     font-weight: bolder;
   }
   .contactFlex .contactForm {
     max-width: 100%;
-    margin-bottom: 150px;
   }
 }
-@media (max-width: 1024px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .headerHome .headerFlexParent .headerTitle {
     max-width: 90%;
   }
@@ -1000,8 +993,6 @@ footer p {
     font-size: 3rem;
   }
   .headerHome .headerFlexParent .headerTitle img {
-    position: absolute;
-    width: 50%;
     left: -30px;
     top: -20px;
   }
