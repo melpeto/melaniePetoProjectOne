@@ -732,7 +732,21 @@ footer p {
 .contactFlex .contactForm {
   max-width: calc(70% - 15px);
   margin: 15px;
+}
+
+.formAndMsgParent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 150px;
+}
+
+.submissionMessage {
+  margin: 15px;
 }
 
 .socialFlex {

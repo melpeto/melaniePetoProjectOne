@@ -1,9 +1,15 @@
-const form = document.querySelector('.contactForm');
-console.log(form);
+const formElement = document.querySelector('.contactForm');
 
-const handleSubmit = (event) => {
+const handleSubmit = function(event) {
     event.preventDefault();
-    console.log('Thanks for contacting us! We do our best to respond within 24 hours.');
+    const submissionMsgDiv = document.querySelector('.submissionMessage');
+    submissionMsgDiv.textContent = `Thanks for contacting us! We do our best to respond within 24 hours.`;
+    const nameElement = document.querySelector('input[type=text]');
+    nameElement.value = "";
+    const emailElement = document.querySelector('input[type=email]');
+    emailElement.value = "";
+    const messageElement = document.querySelector('textarea');
+    messageElement.value = "";
 }
 
-form.addEventListener('submit', handleSubmit);
+formElement.addEventListener('submit', handleSubmit);

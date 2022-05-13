@@ -47,19 +47,25 @@
                 </nav>
             </section>
 
-            <form action="GET" class="contactForm" name="contactForm">
-                <label for="name" class="sr-only">Provide your name</label>
-                <input type="text" id="name" placeholder="Name">
-            
-                <label for="email" class="sr-only">Provide your email address</label>
-                <input type="email" id="email" placeholder="Email address">
-            
-                <label for="comment" class="sr-only">Write a comment</label>
-                <textarea name="comment" id="comment" placeholder="Message" cols="30" rows="10" maxlength="50"></textarea>
-            
-                <label for="submit" class="sr-only">Submit comment</label>
-                <button type="submit" id="submit">Submit</button>
-            </form>
+            <div class="formAndMsgParent">
+                <form action="GET" class="contactForm" name="contactForm">
+                    <label for="name" class="sr-only">Provide your name</label>
+                    <input type="text" id="name" placeholder="Name" required="required" aria-required="true">
+                
+                    <label for="email" class="sr-only">Provide your email address</label>
+                    <input type="email" id="email" placeholder="Email address" required="required" aria-required="true">
+                
+                    <label for="comment" class="sr-only">Write a comment</label>
+                    <textarea name="comment" id="comment" placeholder="Message" cols="30" rows="10" maxlength="50" required="required" aria-required="true"></textarea>
+                
+                    <label for="submit" class="sr-only">Submit comment</label>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+
+                <section class="submissionMessage">
+                    <!--Message will be added here on successful form submission-->
+                </section>
+            </div>
 
         </div>
 

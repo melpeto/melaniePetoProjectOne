@@ -38,10 +38,18 @@
     .contactForm {
         max-width: calc(70% - 15px);
         margin: 15px;
-        margin-bottom: 150px;
     }
 }
 
+.formAndMsgParent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+}
+
+.submissionMessage {
+    margin: 15px;
+}
 
 .socialFlex {
     display: flex;
