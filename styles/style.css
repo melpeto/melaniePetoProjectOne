@@ -396,12 +396,15 @@ button,
 }
 .topNav .wrapper .topNavFlex a {
   padding: 15px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 .topNav .wrapper .hamburgerMenu {
   display: none;
   font-size: 2rem;
   padding: 35px;
   width: 50px;
+  cursor: pointer;
 }
 
 .blogCommentForm,

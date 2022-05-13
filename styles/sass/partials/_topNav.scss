@@ -13,6 +13,7 @@
             }
             a {
                 padding: 15px;
+                transition: 0.25s;
             }
         }
         .hamburgerMenu {
@@ -20,6 +21,7 @@
             font-size: 2rem;
             padding: 35px;
             width: 50px;
+            cursor: pointer
         }
     }
 }
