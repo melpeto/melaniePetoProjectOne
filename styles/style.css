@@ -773,13 +773,15 @@ footer p {
   .topNav {
     position: relative;
   }
+  .topNav .wrapper {
+    position: relative;
+  }
   .topNav .wrapper .topNavFlex {
     background-color: #f0efed;
     position: absolute;
-    height: 0;
     overflow: hidden;
-    top: 0px;
-    left: 0px;
+    top: 80%;
+    left: -400px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -790,23 +792,20 @@ footer p {
     margin: 0;
     padding: 0;
     z-index: 20;
+    -webkit-transition: 0.25s ease-out;
+    transition: 0.25s ease-out;
   }
-  .topNav .wrapper .topNavFlex:hover, .topNav .wrapper .topNavFlex:focus, .topNav .wrapper .topNavFlex:focus-within {
-    height: auto;
+  .topNav .wrapper .topNavFlex.revealMenu {
+    left: 30px;
     overflow: visible;
-  }
-  .topNav .wrapper .topNavFlex li:hover,
-.topNav .wrapper .topNavFlex li:focus-within {
-    color: #f6a823;
+    border: 1px solid darkgrey;
   }
   .topNav .wrapper .hamburgerMenu {
     display: inline-block;
   }
-  .topNav .wrapper .hamburgerMenu:hover + ul.topNavFlex,
-.topNav .wrapper .hamburgerMenu:focus + ul.topNavFlex,
-.topNav .wrapper .hamburgerMenu:focus-within + ul.topNavFlex {
-    height: auto;
-    overflow: visible;
+
+  .highlight {
+    color: #f6a823;
   }
 
   .headerHome .headerFlexParent {
