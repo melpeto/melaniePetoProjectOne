@@ -14,45 +14,24 @@
             .topNavFlex {
                 background-color: $lightBackground;
                 position: absolute;
-                // height: 0;
                 overflow: hidden;
                 top: 80%;
-                // left: 0px;
                 left: -400px;
                 flex-direction: column;
                 align-items: left;
                 margin: 0;
                 padding: 0;
                 z-index: 20;
-                // border: 1px solid darkgray;
                 transition: 0.25s ease-out;
-                // &:hover,
-                // &:focus,
-                // &:focus-within {
-                //     height: auto;
-                //     overflow: visible;
-                // }
                 &.revealMenu {
-                    // height: auto;
                     left: 30px;
                     overflow: visible;
                     border: 1px solid darkgrey;
-                    // right: 5%;
                 }
-                // li:hover,
-                // li:focus-within {
-                //     color: $primary;
-                // }
             }
             .hamburgerMenu {
                 display: inline-block;
             }
-            // .hamburgerMenu:hover + ul.topNavFlex,
-            // .hamburgerMenu:focus + ul.topNavFlex,
-            // .hamburgerMenu:focus-within + ul.topNavFlex {
-            //     height: auto;
-            //     overflow: visible;
-            // }
         }
     }   
 
